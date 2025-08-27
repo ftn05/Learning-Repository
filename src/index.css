@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 3%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 50% 3%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 50% 3%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 50% 3%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 100% 50%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 180 100% 50%;
+  }
+
+  /* We'll only use the dark theme */
+  .dark {
+    --background: 210 50% 3%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 50% 3%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 50% 3%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 210 50% 3%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 100% 50%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    @apply bg-portfolio-gradient min-h-screen overflow-x-hidden;
+  }
+
+  .glow-border {
+    @apply border-2 border-cyan-400/50 shadow-[0_0_15px_rgba(0,255,255,0.5)];
+  }
+
+  .social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-full border border-cyan-400/30 text-cyan-400 bg-cyan-900/20 hover:bg-cyan-900/40 transition-all duration-300 shadow-[0_0_10px_rgba(0,255,255,0.3)];
+  }
+
+  .nav-link {
+    @apply relative text-white/80 hover:text-cyan-400 transition-colors duration-300 px-3 py-2;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-8 text-white relative inline-block;
+  }
+
+  .section-title::after {
+    @apply content-[''] absolute -bottom-2 left-0 w-1/2 h-1 bg-gradient-to-r from-cyan-400 to-transparent;
+  }
+
+  .button-glow {
+    @apply px-6 py-2 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/30 hover:bg-cyan-500/20 transition-all duration-300 shadow-[0_0_10px_rgba(0,255,255,0.3)] hover:shadow-[0_0_15px_rgba(0,255,255,0.5)];
+  }
+
+  .section {
+    @apply py-16;
+  }
+
+  .skill-bar {
+    @apply h-2 bg-gray-700 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply h-full bg-gradient-to-r from-cyan-400 to-blue-500 animate-pulse;
+  }
+
+  .project-card {
+    @apply rounded-lg overflow-hidden border border-cyan-500/20 bg-gray-900/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)];
+  }
+
+  .contact-input {
+    @apply w-full bg-gray-800/50 border border-cyan-500/20 rounded-md px-4 py-2 text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400;
+  }
+
+  .glowing-circle {
+    @apply rounded-full relative border-2 border-cyan-400/50 p-1 animate-glow;
+  }
+
+  .glowing-circle img {
+    @apply rounded-full;
+  }
+}
