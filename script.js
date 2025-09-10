@@ -1,13 +1,3 @@
-// ====================Start Right Click Disabled==================
-
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-});
-
-// ====================End Right Click Disabled====================
-
-
-
 // ====================Start title Replace==================
 
 document.addEventListener('visibilitychange', function () {
@@ -17,9 +7,6 @@ document.addEventListener('visibilitychange', function () {
         document.title = 'Imran Ali | Portfolio';
     }
 });
-
-// ====================End title Replace==================
-
 
 
 // ====================Start Auto Typing==================

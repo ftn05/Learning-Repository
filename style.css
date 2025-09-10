@@ -11,6 +11,12 @@ body {
     user-select: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    
+}
+
 .header {
     position: fixed;
     top: 0;
